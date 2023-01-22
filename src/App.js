@@ -15,6 +15,7 @@ import PreviousReports from './components/PreviousReports'
 function App() {
   const [isAuth, setIsAuth] = useState(false);
 
+  
   return (
       <AuthContext.Provider value={{ isAuth, setAuth: setIsAuth }}>
         <div className='App'>
