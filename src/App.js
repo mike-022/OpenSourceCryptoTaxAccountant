@@ -1,20 +1,34 @@
-import logo from './logo.svg';
 import './App.css';
-import { BrowserRouter as Router, Route } from 'react-router-dom';
+import {
+  BrowserRouter as Router,
+  Route,
+  Routes
+} from 'react-router-dom';
+import { useState } from "react";
+
 import Header from './components/Header';
 import Home from './components/Home';
-import Login from './comonents/Login';
-
+import Login from './components/Login';
+import AuthContext from './components/AuthContext';
+import Dashboard from './components/Dashboard'
+import PreviousReports from './components/PreviousReports'
 function App() {
-    return (
-    <div className="App">
+  const [isAuth, setIsAuth] = useState(false);
+
+  return (
+      <AuthContext.Provider value={{ isAuth, setAuth: setIsAuth }}>
+        <div className='App'>
         <Router>
           <Header />
-          <Route path="/" exact component={Home} />
-          <Route path="/login" component={Login} />
+          <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/login" element={<Login />} />
+              <Route path="/dashboard" element={<Dashboard />} />
+              <Route path="/previousreports" element={<PreviousReports />} />
+          </Routes>
         </Router>
-          
-    </div>
+        </div>
+    </AuthContext.Provider> 
   );
 }
 

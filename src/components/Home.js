@@ -4,7 +4,7 @@ import DragDropComponent from './DragDropComponent';
 const Home = () => {
   return (
     <div>
-      <h1>Welcome to the Home Page</h1>
+      <h1>Open Source Crypto Tax Calculator</h1>
       <DragDropComponent/>
 
     </div>
