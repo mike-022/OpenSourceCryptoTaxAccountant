@@ -1,0 +1,61 @@
+.preview-item {
+    position: relative;
+    /* Add position relative to the parent element */
+}
+
+.trash-icon {
+    position: absolute;
+    /* Add position absolute to the trash icon */
+    bottom: 0;
+    left: 0;
+    margin: 0;
+    /* Remove margin */
+    padding: 0 10px;
+    /* Add some padding */
+}
+
+.dropzone {
+    border: 2px dashed #ccc;
+    border-radius: 5px;
+    padding: 20px;
+    text-align: center;
+}
+
+.dropzone p {
+    margin: 10px 0;
+    font-size: 18px;
+}
+
+.preview-container {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.preview-img {
+    width: 100%;
+}
+
+.preview-info {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 10px;
+}
+
+.preview-info p {
+    margin: 0;
+}
+
+.preview-info button {
+    background: transparent;
+    border: none;
+    color: white;
+    font-size: 14px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
